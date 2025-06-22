@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Template Pada AlpineJS</title>
+    <!-- AlpineJS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <!-- x-bind -->
+    <div x-data="{open: false}" class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+      <!-- Menggunakan x-show langsung di tempatkan pada div nta -->
+      <!-- !open untuk melakukan apapun kondisi sebaliknya -->
+      <!-- x-text untuk merubah tulisan jika sedang terbuka maka isi tulisan menjadi tutup dan sebaliknya -->
+      <!-- x-bind untuk merubah class dengan kondisi tertentu -->
+      <button @click="open = !open" x-text="open ? 'Tutup' : 'Buka'" x-bind:class="open ? 'bg-green-600' : 'bg-sky-400'" class="py-2 px-5 text-white rounded-md">Buka</button>
+      <div x-show="open" x-transition.duration.1000ms class="w-3/4 mx-auto mt-4 p-5 bg-blue-400 rounded text-white">Lorem ipsum dolor sit amet.</div>
+    </div>
+  </body>
+</html>

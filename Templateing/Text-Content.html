@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Template Pada AlpineJS</title>
+    <!-- AlpineJS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body>
+    <!-- x-text -->
+    <div x-data="{nama:'Rhinozz',angka:'4'}" class="container mx-auto w-1/2 text-center mt-10 bg-lime-200 p-10 rounded-xl shadow">
+      <h1 class="text-3xl font-bold bg-gradient-to-r from-blue-500 to-pink-400 bg-clip-text text-transparent drop-shadow-sm">
+        <!-- x-text bisa di isi dengan expresion -->
+        Hallo, <span x-text="angka"></span> adalah bilangan : <span x-text="angka % 2 === 0 ? 'Genap' : 'Ganjil'"></span>
+      </h1>
+    </div>
+  </body>
+</html>
